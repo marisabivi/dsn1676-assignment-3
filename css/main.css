@@ -1,0 +1,125 @@
+@-moz-viewport {width: device-width; scale:1;}
+@-ms-viewport {width: device-width; scale:1;}
+@-o-viewport {width: device-width; scale:1;}
+@-webkit-viewport {width: device-width; scale:1;}
+@viewport {width: device-width; scale:1;}
+
+html {
+    box-sizing: border-box;
+    
+    -moz-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+}
+
+*, *::before, *::after {
+ box-sizing: inherit;   
+}
+
+body {
+    background-color: black;
+    background-image: url(../images/stars.svg);
+    
+}
+
+.rock {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    left: 50px;
+    -webkit-animation: rock-rotate 6s ease-in-out infinite; 
+    animation: rock-rotate 6s ease-in-out infinite; 
+    transform-origin: center;
+}
+
+@-webkit-keyframes rock-rotate {
+     0% { 
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+
+}
+
+@keyframes rock-rotate {
+     0% { 
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.ship {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    left: 200px;
+    -webkit-animation: ship-movement 3s infinite alternate;
+    animation: ship-movement 3s infinite alternate;
+    transform-origin: center;
+    
+}
+
+@-webkit-keyframes ship-movement {
+     0% { 
+        -webkit-transform: translateX(700px);
+    }
+    
+    10% { 
+        -webkit-transform: rotate(0deg);
+    }
+    
+    20% {
+        -webkit-transform: translateY(60px)
+    }
+    
+    50% {
+        -webkit-transform: rotate(180deg)
+    }
+    
+    60% {
+        -webkit-transform: translateY(300px) translateX(-200px)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+    
+
+}
+
+@keyframes ship-movement {
+     0% { 
+        transform: translateX(700px);
+    }
+    
+    10% { 
+        transform: rotate(0deg);
+    }
+    
+    20% {
+        transform: translateY(60px)
+    }
+    
+    50% {
+        transform: rotate(180deg)
+    }
+    
+    60% {
+        transform: translateY(300px) translateX(-200px)
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+    
+
+}
